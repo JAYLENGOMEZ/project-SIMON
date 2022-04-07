@@ -35,7 +35,7 @@ main {
   display: grid;
   grid-template-columns: 250px 250px;
   grid-template-rows: 250px 250px;
-  position: relative;
+  position: absolute;
 }
 
 .console {
@@ -54,8 +54,6 @@ button {
   width: 250px;
   height: 250px;
   border: solid;
-
-  
 }
 
 #btn_one {
@@ -142,4 +140,16 @@ h1 {
     top: 30px;
     position: absolute;
     font-size: 35px;
+}
+
+.start{
+    background-color: rgb(255, 242, 224);
+    width: 80px;
+    height: 40px;
+    border-radius: 50%;
+    right: 90px;
+    top: 85px;
+    position: absolute;
+    text-align: center;
+    font-size: 30px;
 }
