@@ -1,11 +1,145 @@
-body{
-    margin: 0;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.nav_bar{
-    background-color: black;
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main,
+header,
+.game-border,
+.score-board,
+.player-score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  height: 92vh;
+}
+
+.game-border {
+  background-color: rgb(0, 0, 0);
+  height: 525px;
+  width: 525px;
+  border-radius: 50%;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: 250px 250px;
+  grid-template-rows: 250px 250px;
+  position: relative;
+}
+
+.console {
+  width: 260px;
+  height: 260px;
+  border-radius:50%;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  top: 120px;
+  right: 120px;
+}
+
+button {
+  border: none;
+  transition: all 0.4s ease-in-out;
+  width: 250px;
+  height: 250px;
+  border: solid;
+
+  
+}
+
+#btn_one {
+  border-top-left-radius: 100%;
+ 
+  background-color: lightblue;
+}
+
+#btn_one:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+#btn_one:active {
+  background-color: darkblue;
+}
+
+#btn_two {
+  border-top-right-radius:100%;
+  background-color: rgb(231, 231, 158);
+}
+
+#btn_two:hover {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+#btn_two:active {
+  background-color: rgb(190, 190, 0);
+}
+
+#btn_three {
+  border-bottom-left-radius: 100%;
+  background-color: lightcoral;
+}
+
+#btn_three:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+#btn_three:active {
+  background-color: darkred;
+}
+
+#btn_four {
+  border-bottom-right-radius: 100%;
+  background-color: lightgreen;
+}
+
+#btn_four:hover {
+  background-color: green;
+  cursor: pointer;
+}
+
+#btn_four:active {
+  background-color: darkgreen;
+}
+
+.score-board {
+  flex-direction: column;
+  padding: 30px;
+  margin-left: 20px;
+  background-color: rgb(14, 24, 24);
+  border-radius: 5px;
+  color: white;
+}
+
+.player-score {
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.score{
+    background-color: rgb(48, 0, 0);
     color: red;
     text-align: center;
-    height: 100px;
-    font-size: 50px;
+    width: 80px;
+    height: 40px;
+    right: 92px ;
+    top: 30px;
+    position: absolute;
+    font-size: 35px;
 }
