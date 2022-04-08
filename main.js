@@ -8,26 +8,16 @@ let red = document.querySelector("#btn_three")
 let green = document.querySelector("#btn_four")
 let aiTurn = true
 let playerTurn = false
+let round = 1
 
 const button = document.querySelectorAll('button')
-const colors = [blue, yellow, red, green]
+// const colors = [blue, yellow, red, green]
 const startBtn = document.querySelector('.start')
 
 
 
 
- startBtn.addEventListener('click', () =>{
-    console.log('i worked')
-})
-// for (i = 0; i < colors.length; i++)
-// console.log(i)
-
-
-// button.addEventListener('click', () =>{
-//     for (let i = 0; i < colors.length; i++){
-//         console.log(colors[i])
-//     }
-// })
+ 
 
 blue.addEventListener('click', () =>{
         console.log('yoyo')
@@ -42,9 +32,35 @@ green.addEventListener('click', () =>{
         console.log('yoyo')
 })
 
-const randomColor = () => {
-    return colors[parseInt(Math.random() * colors.length)]
+
+const addRandomColor = () => {
+    let addedColor = colors[parseInt(Math.random() * colors.length)]
+
+    console.log(addedColor)
 };
-randomColor()
+
+// function lightColor(color) {
+//     if(aiTurn === true)
+// }
 
 
+function newRound() {
+    round += 1;
+    aiArray.push(addRandomColor())
+    console.log(aiArray)
+  }
+
+
+  function startGame() {
+
+  }
+
+  startBtn.addEventListener('click', () => {
+    // addRandomColor()
+    let highlighted =["blue", "yellow", "red", "green"]
+    let randomNum = Math.floor(Math.random() * highlighted.length)
+    let randomButton = button[randomNum]
+    randomButton.style.backgroundColor = highlighted[randomNum]
+  });
+
+  
