@@ -6,15 +6,17 @@ let blue = document.querySelector("#btn_one")
 let yellow = document.querySelector("#btn_two")
 let red = document.querySelector("#btn_three")
 let green = document.querySelector("#btn_four")
+let aiTurn = true
+let playerTurn = false
 
 const button = document.querySelectorAll('button')
 const colors = [blue, yellow, red, green]
 const startBtn = document.querySelector('.start')
-console.log(button)
 
 
 
-startBtn.addEventListener('click', () =>{
+
+ startBtn.addEventListener('click', () =>{
     console.log('i worked')
 })
 // for (i = 0; i < colors.length; i++)
@@ -40,6 +42,9 @@ green.addEventListener('click', () =>{
         console.log('yoyo')
 })
 
-function userPattern(){
-    if('click')
-}
+const randomColor = () => {
+    return colors[parseInt(Math.random() * colors.length)]
+};
+randomColor()
+
+
