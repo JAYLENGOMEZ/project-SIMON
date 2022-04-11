@@ -57,32 +57,28 @@ button {
   border: solid;
 }
 
-#btn_one {
+#blue {
   border-top-left-radius: 100%;
   cursor: pointer;
   background-color: blue;
 }
 
 
-#btn_two {
+#yellow {
   border-top-right-radius:100%;
-  /* background-color: rgb(231, 231, 158); */
   background-color: yellow;
   cursor: pointer;
-  /* z-index: 1px; */
 }
 
 
-#btn_three {
+#red {
   border-bottom-left-radius: 100%;
-  /* background-color: lightcoral; */
   background-color: red;
   cursor: pointer;
 }
 
-#btn_four {
+#green {
   border-bottom-right-radius: 100%;
-  /* background-color: lightgreen; */
   background-color: green;
   cursor: pointer;
 }
@@ -130,7 +126,7 @@ h1 {
 }
 
 .changeColor {
-  filter: brightness(70%);
+  filter: brightness(53%);
   
 }
 
