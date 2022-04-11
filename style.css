@@ -46,6 +46,7 @@ main {
   position: absolute;
   top: 120px;
   right: 120px;
+  z-index: 1;
 }
 
 button {
@@ -58,59 +59,32 @@ button {
 
 #btn_one {
   border-top-left-radius: 100%;
- 
-  background-color: lightblue;
-}
-
-#btn_one:hover {
-  background-color: blue;
   cursor: pointer;
+  background-color: blue;
 }
 
-#btn_one:active {
-  background-color: darkblue;
-}
 
 #btn_two {
   border-top-right-radius:100%;
-  background-color: rgb(231, 231, 158);
-}
-
-#btn_two:hover {
+  /* background-color: rgb(231, 231, 158); */
   background-color: yellow;
   cursor: pointer;
+  /* z-index: 1px; */
 }
 
-#btn_two:active {
-  background-color: rgb(190, 190, 0);
-}
 
 #btn_three {
   border-bottom-left-radius: 100%;
-  background-color: lightcoral;
-}
-
-#btn_three:hover {
+  /* background-color: lightcoral; */
   background-color: red;
   cursor: pointer;
 }
 
-#btn_three:active {
-  background-color: darkred;
-}
-
 #btn_four {
   border-bottom-right-radius: 100%;
-  background-color: lightgreen;
-}
-
-#btn_four:hover {
+  /* background-color: lightgreen; */
   background-color: green;
   cursor: pointer;
-}
-
-#btn_four:active {
-  background-color: darkgreen;
 }
 
 .score-board {
@@ -152,4 +126,54 @@ h1 {
     position: absolute;
     text-align: center;
     font-size: 30px;
+    cursor: pointer;
 }
+
+.changeColor {
+  filter: brightness(70%);
+  
+}
+
+
+
+
+
+/* #btn_one:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+#btn_one:active {
+  background-color: darkblue;
+} */
+
+
+/* #btn_four:hover {
+  background-color: green;
+  cursor: pointer;
+}
+
+#btn_four:active {
+  background-color: darkgreen;
+} */
+
+
+/* #btn_three:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+#btn_three:active {
+  background-color: darkred;
+} */
+
+
+
+/* #btn_two:hover {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+#btn_two:active {
+  background-color: rgb(190, 190, 0);
+} */
