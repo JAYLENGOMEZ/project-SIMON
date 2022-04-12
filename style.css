@@ -125,7 +125,7 @@ h1 {
     cursor: pointer;
 }
 
-.changeColor {
+.highlightColor {
   filter: brightness(53%);
   
 }

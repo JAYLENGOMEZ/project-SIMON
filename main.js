@@ -1,5 +1,4 @@
-// let aiSequence = 0;
-// let playSequence = 0;
+
 let aiArray = [];
 let playerArray = [];
 let blue = document.querySelector("#blue")
@@ -15,38 +14,19 @@ const colors = [blue, yellow, red, green]
 const startBtn = document.querySelector('.start')
 
 
-blue.addEventListener('click', () =>{
-        playerArray.push('blue')
-        blue.classList.add('changeColor');
-        setTimeout(() => {
-                blue.classList.remove('changeColor')
-        },500)
-        console.log(playerArray)
-})
-yellow.addEventListener('click', () =>{
-        playerArray.push('yellow')
-        yellow.classList.add('changeColor');
-        setTimeout(() => {
-                yellow.classList.remove('changeColor')
-        },500)
-        console.log(playerArray)
-})
-red.addEventListener('click', () =>{
-        playerArray.push('red')
-        red.classList.add('changeColor');
-        setTimeout(() => {
-                red.classList.remove('changeColor')
-        },500)
-        console.log(playerArray)
-})
-green.addEventListener('click', () =>{
-        playerArray.push('green')
-        green.classList.add('changeColor');
-        setTimeout(() => {
-                green.classList.remove('changeColor')
-        },500)
-        console.log(playerArray)
-})
+blue.addEventListener('click', playerRepeat)
+
+yellow.addEventListener('click', playerRepeat)
+       
+red.addEventListener('click', playerRepeat)
+      
+green.addEventListener('click', playerRepeat)
+
+startBtn.addEventListener('click', () =>
+        startGame()
+);
+
+
 
 function newRound() {
         round += 1;
@@ -56,41 +36,45 @@ function newRound() {
 function addRandomColor() {
     let addedColor = colors[parseInt(Math.random() * colors.length)]
         setTimeout(function() {
-        addedColor.classList.add('changeColor');
+        addedColor.classList.add('highlightColor');
         setTimeout(function() {
-        addedColor.classList.remove("changeColor");
+        addedColor.classList.remove("highlightColor");
         }, 700);
         });
         aiArray.push(addedColor.id)
         console.log(aiArray)
-        
 };
 
 
 
-
+function playerRepeat(event) {
+        event.target.classList.add('highlightColor')
+        setTimeout(function(){
+                event.target.classList.remove('highlightColor')
+        }, 300)
+        if (aiArray === playerArray)
+        if (aiTurn === true)
+        aiTurn = false; 
+        playerTurn = true;
+        playerArray.push(event.target.id)
+        console.log(playerArray)
+  };
 
 
   function startGame() {
          if (aiTurn === false){
          aiTurn = true
-         addRandomColor()
          newRound()
+         setTimeout(addRandomColor(), 5000)
+        
  }
         
   };
 
 
-  function playerRepeat() {
-        if (aiTurn === true)
-        aiTurn = false; 
-        playerTurn = true;
-  };
+  
 
-  startBtn.addEventListener('click', () =>
-        startGame()
-  );
-
+  
 
 
 
@@ -138,3 +122,39 @@ function addRandomColor() {
 // function lightColor(color) {
 //     if(aiTurn === true)
 // }
+
+        // playerArray.push('blue')
+        // blue.classList.add('changeColor');
+        // setTimeout(() => {
+        //         blue.classList.remove('changeColor')
+        // },500)
+        // console.log(playerArray)
+// })
+
+        // playerArray.push('green')
+        // green.classList.add('changeColor');
+        // setTimeout(() => {
+        //         green.classList.remove('changeColor')
+        // },500)
+        // console.log(playerArray)
+// })
+
+  // playerArray.push('red')
+        // red.classList.add('changeColor');
+        // setTimeout(() => {
+        //         red.classList.remove('changeColor')
+        // },500)
+        // console.log(playerArray)
+// })
+
+ // playerArray.push('yellow')
+        // yellow.classList.add('changeColor');
+        // setTimeout(() => {
+        //         yellow.classList.remove('changeColor')
+        // },500)
+        // console.log(playerArray)
+// })
+
+
+// let aiSequence = 0;
+// let playSequence = 0;
