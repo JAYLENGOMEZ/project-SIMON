@@ -39,18 +39,15 @@ function newRound() {
 function addRandomColor() {
     let addedColor = colors[parseInt(Math.random() * colors.length)]
     aiArray.push(addedColor.id)
-    console.log(button )
-    console.log(colors)
     for (let i = 0; i < aiArray.length; i++){
         setTimeout(function() {
-        button[i+1].classList.add('highlightColor');
+        addedColor.classList.add('highlightColor');
         setTimeout(function() {
-        button[i+1].classList.remove("highlightColor");
+        addedColor.classList.remove("highlightColor");
         }, 700);
         });
-        console.log(aiArray[i])
-        console.log(aiArray)
         
+        console.log(aiArray)
 }   
 };
 
