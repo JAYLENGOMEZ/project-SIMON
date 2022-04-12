@@ -5,9 +5,11 @@ let blue = document.querySelector("#blue")
 let yellow = document.querySelector("#yellow")
 let red = document.querySelector("#red")
 let green = document.querySelector("#green")
+let score = document.querySelector('.score')
 let aiTurn = false
 let playerTurn = false
 let round = 0
+let myScore = 0
 
 const button = document.querySelectorAll('button')
 const colors = [blue, yellow, red, green]
@@ -31,18 +33,25 @@ startBtn.addEventListener('click', () =>
 function newRound() {
         round += 1;
         console.log(`It is round ${round}`)
+        
       };
 
 function addRandomColor() {
     let addedColor = colors[parseInt(Math.random() * colors.length)]
+    aiArray.push(addedColor.id)
+    console.log(button )
+    console.log(colors)
+    for (let i = 0; i < aiArray.length; i++){
         setTimeout(function() {
-        addedColor.classList.add('highlightColor');
+        button[i+1].classList.add('highlightColor');
         setTimeout(function() {
-        addedColor.classList.remove("highlightColor");
+        button[i+1].classList.remove("highlightColor");
         }, 700);
         });
-        aiArray.push(addedColor.id)
+        console.log(aiArray[i])
         console.log(aiArray)
+        
+}   
 };
 
 
@@ -52,31 +61,46 @@ function playerRepeat(event) {
         setTimeout(function(){
                 event.target.classList.remove('highlightColor')
         }, 300)
-        if (aiArray === playerArray)
+        playerArray.push(event.target.id)
+        console.log(aiArray, playerArray)
+        if (aiArray[aiArray.length - 1] == playerArray[playerArray.length - 1]){
+                newRound()
+                playerArray = []
+                myScore += 1
+                score.innerHTML = myScore
+                console.log(myScore)
+                setTimeout(() => addRandomColor(),1500)
+        }
         if (aiTurn === true)
         aiTurn = false; 
         playerTurn = true;
-        playerArray.push(event.target.id)
-        console.log(playerArray)
+        // console.log(playerArray)
   };
 
 
   function startGame() {
          if (aiTurn === false){
          aiTurn = true
-         newRound()
-         setTimeout(addRandomColor(), 5000)
-        
- }
-        
-  };
+         newRound()  }
+         setTimeout(() => addRandomColor(), 1500)
+        //  compareArrays(aiArray, playerArray)   
+}
 
 
   
-
   
 
-
+// function compareArrays(aiArray, playerArray) {
+//         if (aiArray.length !== playerArray.length) {
+//           return false;
+//         } else {
+//           for (let i = 0; i < aiArray.length ; i++) {
+//             if (aiArray[i] !== playerArray[i]) {
+//               console.log(false)
+//             } else {
+//               console.log(true)
+//       }
+//           }}}
 
 
 
