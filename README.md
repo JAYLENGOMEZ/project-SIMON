@@ -4,7 +4,7 @@ Simon is a game where there is a board of 4 colors. There is a sequence of color
 
 
 
-/Users/jaylengomez/Desktop/simon_game.png
+![](/Users/jaylengomez/Desktop/simon_game.png)
 
 Built With
 
