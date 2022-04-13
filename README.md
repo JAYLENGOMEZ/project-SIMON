@@ -2,6 +2,11 @@ PROJECT SIMON
 
 Simon is a game where there is a board of 4 colors. There is a sequence of colors highlighted and the player must remember the order and repeat it. For every level the player completes another color will be added to the end of the sequence . If the player gets the sequence wrong the game ends. 
 
+
+
+/var/folders/dn/042lr5752w5_jwh24f9pq9980000gn/T/TemporaryItems/NSIRD_screencaptureui_ZI0PJz/Screen Shot 2022-04-12 at 10.55.38 PM.png
+
+
 Built With
 
 - JavaScript
